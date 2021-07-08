@@ -1,0 +1,68 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic);
+
+/**
+ * Base Elements
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 24px;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+span,
+a,
+button {
+  font-family: 'Lato', 'Open Sans', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+body {
+  background: #f3f3f3;
+  margin: 1.5em 3em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1.5em;
+}
+
+.button {
+  background-color: cornflowerblue;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  padding: 0.5rem;
+}
+
+.jummbo {
+  font-size: 2em;
+}
+
+.right {
+  float: right;
+}
+
+.tomster {
+  background: url(../assets/images/teaching-tomster.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+}
