@@ -44,12 +44,24 @@ h6 {
   font-size: 1.5em;
 }
 
+.body {
+  margin: 1rem 0;
+}
+
 .button {
   color: white;
-  background-color: rebeccapurple;
+  background-color: rgba(229,76,59,.8);
   border-radius: 10px;
   margin: 1.5rem 0;
   padding: 0.5rem;
+}
+
+.button:hover {
+  background-color: rgba(229,76,59, 1);
+}
+
+a.button {
+  text-decoration: none;
 }
 
 .jummbo {
@@ -67,4 +79,27 @@ h6 {
   width: 10rem;
   height: 15rem;
   margin: 0 1rem;
+}
+
+.menu {
+  display: flex;
+  align-items: baseline;
+
+  margin-left: -0.3rem;
+  padding: 0 0.3rem;
+  background-color: rgba(229,76,59,.8);
+  border-radius: 10px;
+}
+
+.menu a{
+  text-decoration: none;
+  color: rgba(255,255,255,.9);
+}
+
+.menu a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.menu-item {
+  margin-right: 0.5rem;
 }
