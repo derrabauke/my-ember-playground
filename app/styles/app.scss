@@ -4,21 +4,20 @@
   margin: 1rem 0;
 }
 
+a.button,
 .button {
   color: white;
   background-color: rgba(229,76,59,.8);
   border-radius: 10px;
   margin: 1.5rem 0;
   padding: 0.5rem;
-}
-
-.button:hover {
-  background-color: rgba(229,76,59, 1);
-}
-
-a.button {
   text-decoration: none;
+  
+  &:hover {
+    background-color: rgba(229,76,59, 1);
+  }
 }
+
 
 .jummbo {
   font-size: 2em;
