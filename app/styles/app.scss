@@ -1,0 +1,111 @@
+@import "./base.scss";
+
+.body {
+  margin: 1rem 0;
+}
+
+.button {
+  color: white;
+  background-color: rgba(229,76,59,.8);
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  padding: 0.5rem;
+}
+
+.button:hover {
+  background-color: rgba(229,76,59, 1);
+}
+
+a.button {
+  text-decoration: none;
+}
+
+.jummbo {
+  font-size: 2em;
+}
+
+.right {
+  float:right;
+  margin-right: 1rem;
+}
+
+.tomster {
+  background: url(../assets/images/teaching-tomster.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 15vw;
+  height: 15vh;
+  margin: 0 1rem;
+}
+
+.menu {
+  display: flex;
+  align-items: baseline;
+
+  margin-left: -0.3rem;
+  padding: 0 0.3rem;
+  background-color: rgba(229,76,59,.8);
+  border-radius: 10px;
+  
+  a{
+    text-decoration: none;
+    color: rgba(255,255,255,.9);
+  }
+  
+  a:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+  
+  .menu-item {
+    margin-right: 0.5rem;
+  }
+}
+
+
+.rentals {
+  margin: 1rem 0;
+
+  li {
+    margin-bottom: .2rem;
+    padding: 0 0.5rem;
+    list-style-type: none;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+}
+
+.rental {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem 0;
+
+   > * {
+    margin-right: 0.5rem;
+  }
+}
+
+button.image {
+  cursor: zoom-in;
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+  &.large {
+    flex-grow: 5;
+    cursor: zoom-out;
+  }
+
+  img {
+    width: 20vw;
+    height: auto;
+  }
+  
+  &.large img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  small {
+    display: block;
+  }
+}
