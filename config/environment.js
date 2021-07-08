@@ -1,6 +1,9 @@
 'use strict';
 
 module.exports = function (environment) {
+  // import dotenv as early as possible for local env file pickup
+  require('dotenv').config();
+
   let ENV = {
     modulePrefix: 'em-app',
     environment,
@@ -46,7 +49,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
     // here you can enable a production-specific feature
   }
-
+  console.log(process.env.EMBER_MAPBOX_TOKEN);
   ENV.MAPBOX_ACCESS_TOKEN = process.env.EMBER_MAPBOX_TOKEN;
 
   return ENV;
