@@ -43,3 +43,8 @@ h5,
 h6 {
   font-size: 1.5em;
 }
+
+.smallcaps { 
+  font-feature-settings: "smcp";
+  font-variant-caps: small-caps;
+}
