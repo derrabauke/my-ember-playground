@@ -1,5 +1,7 @@
 @import "./base.scss";
 
+$br: 10px;
+
 .body {
   margin: 1rem 0;
 }
@@ -8,7 +10,7 @@ a.button,
 .button {
   color: white;
   background-color: rgba(229,76,59,.8);
-  border-radius: 10px;
+  border-radius: $br;
   margin: 1.5rem 0;
   padding: 0.5rem;
   text-decoration: none;
@@ -44,7 +46,7 @@ a.button,
   margin-left: -0.3rem;
   padding: 0 0.3rem;
   background-color: rgba(229,76,59,.8);
-  border-radius: 10px;
+  border-radius: $br;
   
   a{
     text-decoration: none;
@@ -66,10 +68,10 @@ a.button,
 
   li {
     margin-bottom: .2rem;
-    padding: 0 0.5rem;
+    padding: .1rem .4rem;
     list-style-type: none;
-    border: 1px solid black;
-    border-radius: 5px;
+    background-color: rgb(242, 236, 236);
+    border-radius: $br;
   }
 }
 
@@ -81,30 +83,58 @@ a.button,
    > * {
     margin-right: 0.5rem;
   }
-}
-
-button.image {
-  cursor: zoom-in;
-  border: none;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-
-  &.large {
-    flex-grow: 5;
-    cursor: zoom-out;
-  }
-
-  img {
-    width: 20vw;
-    height: auto;
-  }
   
-  &.large img{
-    width: 100%;
-    max-width: 100%;
-    height: auto;
+  button.image {
+    cursor: zoom-in;
+    border: none;
+    border-radius: $br;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  
+    &.large {
+      flex-grow: 5;
+      cursor: zoom-out;
+    }
+  
+    img {
+      border-radius: $br $br 0 0;
+      width: 20vw;
+      height: auto;
+    }
+    
+    &.large img{
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  
+    small {
+      display: block;
+    }
   }
 
-  small {
-    display: block;
+  .details {
+    flex-grow: 2;
+    display: grid;
+    gap: .1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template: 
+      "a a" 
+      ". ." 
+      ". ."; 
+
+    .detail-title {
+      grid-area: a;
+    }
+
+    .detail {
+      span {
+        font-weight: lighter;
+      }
+    }
+  }
+
+  .map img {
+    border-radius: $br;
   }
 }
+
