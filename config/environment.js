@@ -49,7 +49,6 @@ module.exports = function (environment) {
   if (environment === 'production') {
     // here you can enable a production-specific feature
   }
-  console.log(process.env.EMBER_MAPBOX_TOKEN);
   ENV.MAPBOX_ACCESS_TOKEN = process.env.EMBER_MAPBOX_TOKEN;
 
   return ENV;
