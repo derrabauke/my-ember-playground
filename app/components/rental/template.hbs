@@ -4,7 +4,14 @@
     alt="A picture of {{@rental.title}}"
   />
   <div class="details">
-    <h3 class="detail-title">{{@rental.title}}</h3>
+    <h3>
+      <LinkTo 
+        @route="rental" 
+        @model={{@rental}} 
+        class="detail-title"
+        >{{@rental.title}}
+      </LinkTo>
+    </h3>
     <div class="detail owner">
       <span>Owner:</span> {{@rental.owner}}
     </div>
