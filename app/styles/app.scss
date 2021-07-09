@@ -1,9 +1,10 @@
 @import "./base.scss";
+@import 'node_modules/modern-normalize/modern-normalize.css';
 
 $br: 10px;
 
 .body {
-  margin: 1rem 0;
+  margin: 1rem;
 }
 
 a.button,
@@ -19,7 +20,6 @@ a.button,
     background-color: rgba(229,76,59, 1);
   }
 }
-
 
 .jummbo {
   font-size: 2em;
