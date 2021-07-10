@@ -1,5 +1,4 @@
 @import "./base.scss";
-@import 'node_modules/modern-normalize/modern-normalize.css';
 
 $br: 10px;
 
@@ -90,68 +89,136 @@ a.button,
     background-color: rgb(242, 236, 236);
     border-radius: $br;
   }
+  
+  // LISTED rental view
+  .rental {
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem 0;
+  
+    > * {
+      margin-right: .5rem;
+    }
+    
+    button.image {
+      width: 20vw;
+      max-height: 100%;
+      margin: auto 0.5rem;
+      
+      &.large {
+        width: 70%;
+        flex-grow: 3;
+        cursor: zoom-out;
+      }
+    
+      img {
+        border-radius: $br $br 0 0;
+        width: 100%;
+        height: auto;
+      }
+      
+      &.large img{
+        width: 100%;
+        height: auto;
+      }
+    }
+  
+    .details {
+      flex-grow: 2;
+      display: grid;
+      gap: .1rem;
+      grid-template-columns: 1fr 1fr;
+      grid-template: 
+        "a a" 
+        ". ." 
+        ". ."; 
+  
+      .detail-title {
+        grid-area: a;
+        
+        margin: auto 0;
+      }
+    }
+
+    .map img {
+      max-width: 15vw;
+      margin: auto 0.5rem;
+    }
+  }
 }
 
+// GENERIC rental view (list and detailed)
 .rental {
-  display: flex;
-  flex-direction: row;
-  margin: 0.5rem 0;
 
-   > * {
-    margin-right: 0.5rem;
-  }
-  
   button.image {
     cursor: zoom-in;
     border: none;
     border-radius: $br;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  
+    
     &.large {
-      flex-grow: 5;
       cursor: zoom-out;
     }
-  
+
     img {
-      border-radius: $br $br 0 0;
-      width: 20vw;
-      height: auto;
-    }
-    
-    &.large img{
       width: 100%;
-      max-width: 100%;
-      height: auto;
     }
-  
+
     small {
       display: block;
     }
   }
 
   .details {
-    flex-grow: 2;
-    display: grid;
-    gap: .1rem;
-    grid-template-columns: 1fr 1fr;
-    grid-template: 
-      "a a" 
-      ". ." 
-      ". ."; 
+    font-style: oblique;
 
-    .detail-title {
-      grid-area: a;
-    }
-
-    .detail {
-      span {
-        font-weight: lighter;
-      }
+    span {
+      font-style: normal;
     }
   }
 
   .map img {
     border-radius: $br;
+    width: 100%;
+    height: auto;
+  }
+}
+
+// DETAILED rental view
+.rental.detailed {
+  display: grid;
+  gap: .5rem;
+  grid-template:
+    "d d"
+    ". ." 
+    "c c";
+
+  button.image {
+
+    img {
+      padding:.5rem;
+      max-width: 100%;
+      height: auto;
+    }
+
+    &.large {
+      grid-area: d;
+    }
+  }
+
+  .details {
+    font-style: oblique;
+
+    span {
+      font-style: normal;
+    }
+  }
+
+  .map {
+    grid-area: c;
+
+    width: 100%;
+    margin: 1rem auto;
   }
 }
 
